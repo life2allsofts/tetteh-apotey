@@ -51,7 +51,12 @@ function getImageDescription(filename: string): { title: string; description: st
       title: 'Control Point Details & Navigation',
       description: 'View comprehensive pillar information including coordinates and properties, then navigate directly to field locations',
       shortTitle: 'Details'
-    }
+    },
+    'ita-computations-home.png': {
+  title: 'Web Application Interface',
+  description: 'Professional geospatial web app for Ghanaian surveyors featuring coordinate processing, area calculations, bearing/distance computations, and CSV imports',
+  shortTitle: 'Web App'
+},
   };
 
   return descriptions[filename] || { 
@@ -81,7 +86,14 @@ export default function Home() {
     loadProjects();
   }, []);
 
-  const handleImageClick = (imageSrc: string) => {
+  // FIXED: Safe handleImageClick function
+  const handleImageClick = (imageSrc: string | null | undefined) => {
+    // Safe check for valid image source
+    if (!imageSrc || typeof imageSrc !== 'string') {
+      console.warn('Invalid image source:', imageSrc);
+      return;
+    }
+    
     const filename = imageSrc.split('/').pop() || '';
     const imageInfo = getImageDescription(filename);
     setSelectedImage({
@@ -147,55 +159,74 @@ export default function Home() {
                   )}
                 </div>
 
-                {/* Project Screenshot Gallery */}
-                <div className="mb-4">
-                  {/* Main Featured Image - Clickable */}
-                  {project.featuredImage ? (
-                    <div className="mb-3">
-                      <img 
-                        src={project.featuredImage.startsWith('/') ? project.featuredImage : `/${project.featuredImage}`}
-                        alt={`${project.title} screenshot`}
-                        className="w-full h-48 object-contain rounded-lg border border-gray-200 shadow-sm bg-white cursor-pointer hover:shadow-md transition-shadow"
-                        onClick={() => handleImageClick(project.featuredImage!)}
-                      />
-                      {/* ORANGE TITLE - UPDATED */}
-                      <p className="text-xs font-medium text-orange-600 text-center mt-2">
-                        {getImageDescription(project.featuredImage?.split('/').pop() || '').title}
-                      </p>
-                    </div>
-                  ) : (
-                    <div className="w-full h-48 bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-center mb-3">
-                      <span className="text-gray-400 text-sm">Screenshot coming soon</span>
-                    </div>
-                  )}
+               {/* Project Screenshot Gallery - ALL IMAGES CLICKABLE */}
+<div className="mb-4">
+  {/* Main Featured Image - Always Clickable */}
+  {project.featuredImage ? (
+    <div className="mb-3">
+      <img 
+        src={project.featuredImage}
+        alt={`${project.title} screenshot`}
+        className="w-full h-48 object-contain rounded-lg border border-gray-200 shadow-sm bg-white cursor-pointer hover:shadow-md transition-shadow"
+        onClick={() => project.featuredImage && handleImageClick(project.featuredImage)}
+      />
+      {/* Click hint for main image */}
+      <p className="text-xs text-gray-500 text-center mt-1">
+        Click image to view details
+      </p>
+      {/* Image title */}
+      <p className="text-xs font-medium text-orange-600 text-center mt-1">
+        {typeof project.featuredImage === 'string' 
+          ? getImageDescription(project.featuredImage.split('/').pop() || '').title
+          : 'Application Screenshot'
+        }
+      </p>
+    </div>
+  ) : (
+    <div className="w-full h-48 bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-center mb-3">
+      <span className="text-gray-400 text-sm">Screenshot coming soon</span>
+    </div>
+  )}
 
-                  {/* Thumbnail Gallery - Show other images */}
-                  {project.images && project.images.length > 1 && (
-                    <div className="mt-3">
-                      {/* ORANGE "More screenshots" - UPDATED */}
-                      <p className="text-xs font-medium text-orange-600 mb-2">More screenshots:</p>
-                      <div className="flex space-x-2 overflow-x-auto pb-2">
-                        {project.images.filter((img: string) => img !== project.featuredImage).map((image: string, index: number) => (
-                          <div 
-                            key={index}
-                            className="flex-shrink-0 w-20 cursor-pointer"
-                            onClick={() => handleImageClick(image)}
-                          >
-                            <img 
-                              src={image.startsWith('/') ? image : `/${image}`}
-                              alt={`${project.title} feature ${index + 1}`}
-                              className="w-20 h-16 object-cover rounded border border-gray-200 hover:border-orange-400 transition-colors"
-                            />
-                            {/* ORANGE THUMBNAIL TITLES - UPDATED */}
-                            <p className="text-xs font-medium text-orange-600 text-center mt-1 truncate">
-                              {getImageDescription(image.split('/').pop() || '').shortTitle}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
+  {/* Thumbnail Gallery - Only show if multiple images exist */}
+  {project.images && Array.isArray(project.images) && project.images.length > 1 && (
+    <div className="mt-3">
+      <p className="text-xs font-medium text-orange-600 mb-2">More screenshots:</p>
+      <div className="flex space-x-2 overflow-x-auto pb-2">
+        {project.images
+          .filter((img: string) => img && typeof img === 'string' && img !== project.featuredImage)
+          .map((image: string, index: number) => (
+            <div 
+              key={index}
+              className="flex-shrink-0 w-20 cursor-pointer"
+              onClick={() => handleImageClick(image)}
+            >
+              <img 
+                src={image}
+                alt={`${project.title} feature ${index + 1}`}
+                className="w-20 h-16 object-cover rounded border border-gray-200 hover:border-orange-400 transition-colors"
+              />
+              <p className="text-xs font-medium text-orange-600 text-center mt-1 truncate">
+                {typeof image === 'string' 
+                  ? getImageDescription(image.split('/').pop() || '').shortTitle
+                  : 'Feature'
+                }
+              </p>
+            </div>
+          ))}
+      </div>
+    </div>
+  )}
+
+  {/* Single image projects get a visual hint */}
+  {project.featuredImage && (!project.images || project.images.length <= 1) && (
+    <div className="text-center mt-2">
+      <p className="text-xs text-gray-500">
+        💡 <span className="font-medium">Click the image above</span> to view details
+      </p>
+    </div>
+  )}
+</div>
                 
                 <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
                 
