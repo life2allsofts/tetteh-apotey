@@ -1,4 +1,4 @@
-// utils/firestoreUtils.ts - TEMPORARY VERSION
+// utils/firestoreUtils.ts - UPDATED VERSION
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 
@@ -11,6 +11,13 @@ export interface Project {
   techStack: string[];
   isPublished: boolean;
   dateCreated: any;
+  
+  // ADD THESE NEW FIELDS:
+  status?: 'public' | 'private';
+  launchDate?: string;
+  featured?: boolean;
+  featuredImage?: string;     // ADD THIS
+  images?: string[];          // ADD THIS
 }
 
 export async function getPublishedProjects(): Promise<Project[]> {
