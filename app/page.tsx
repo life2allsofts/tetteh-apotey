@@ -1,3 +1,4 @@
+//app\page.tsx
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -186,6 +187,107 @@ export default function Home() {
           Building practical software solutions for geospatial challenges, survey automation, 
           and digital transformation in infrastructure development.
         </p>
+      </section>
+
+      {/* Professional Tools Section */}
+      <section className="container mx-auto px-6 py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">🚀 Professional Tools</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Interactive applications solving real-world problems in geospatial engineering and software development
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Ghana Coordinate Converter Tool */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-green-500 overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center space-x-3">
+                  <span className="text-2xl">🇬🇭</span>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-800">Ghana Coordinate Converter</h3>
+                    <span className="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-medium">
+                      Live Production
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Web companion to our successful mobile app. Convert between Ghana Grid coordinates and Geographic coordinates with survey-grade precision. Features DMS input and meets Ghana cadastral standards.
+              </p>
+              
+              <div className="mb-4">
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full font-medium">
+                    Grid ↔ Geographic Conversion
+                  </span>
+                  <span className="bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full font-medium">
+                    DMS Input Support
+                  </span>
+                  <span className="bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full font-medium">
+                    Cadastral Accuracy
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex space-x-3 mt-6">
+                <a 
+                  href="https://tetteh-apotey.vercel.app/tools/coordinate-converter"
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium"
+                >
+                  Use Tool
+                </a>
+                <a 
+                  href="https://github.com/life2allsofts/ita-ghana-coordinate-converter-web"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 border border-gray-300 hover:border-gray-400 text-gray-700 text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium hover:bg-gray-50"
+                >
+                  View Code
+                </a>
+              </div>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Python Flask</span>
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Geospatial</span>
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Vercel</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Coming Soon Tool */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500 overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center space-x-3">
+                  <span className="text-2xl">🛠️</span>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-800">More Tools Coming Soon</h3>
+                    <span className="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full font-medium">
+                      In Development
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Building more professional tools for surveyors, geomatics engineers, and the Ghana land sector.
+              </p>
+
+              <div className="flex space-x-3 mt-6">
+                <a 
+                  href="mailto:tettehapotey@gmail.com?subject=Tool Suggestion&body=Hello Isaac, I'd like to suggest a tool for: [describe your tool idea]"
+                  className="flex-1 border border-orange-300 hover:border-orange-400 text-orange-700 text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium hover:bg-orange-50"
+                >
+                  Suggest a Tool
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Projects Section */}
