@@ -234,7 +234,7 @@ export default function Home() {
 
               <div className="flex space-x-3 mt-6">
                 <a 
-                  href="https://tetteh-apotey.vercel.app/tools/coordinate-converter"
+                  href="https://ita-ghana-coordinate-converter-web.vercel.app/"
                   className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium"
                 >
                   Use Tool
