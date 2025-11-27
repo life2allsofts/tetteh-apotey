@@ -232,22 +232,17 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex space-x-3 mt-6">
-                <a 
-                  href="https://ita-ghana-coordinate-converter-web.vercel.app/"
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium"
-                >
-                  Use Tool
-                </a>
-                <a 
-                  href="https://github.com/life2allsofts/ita-ghana-coordinate-converter-web"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 border border-gray-300 hover:border-gray-400 text-gray-700 text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium hover:bg-gray-50"
-                >
-                  View Code
-                </a>
-              </div>
+           <div className="flex space-x-3 mt-6">
+  <a 
+    href="https://ita-ghana-coordinate-converter-web.vercel.app/"
+    className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium"
+  >
+    Use Tool
+  </a>
+  <div className="flex-1 border border-gray-300 text-gray-400 text-center py-3 px-4 rounded-lg font-medium bg-gray-100 cursor-not-allowed">
+    Code in Development
+  </div>
+</div>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Python Flask</span>
