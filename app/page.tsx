@@ -1,4 +1,3 @@
-//app\page.tsx
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -175,18 +174,157 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Hero Section */}
+      {/* Hero Section with Featured Research Badge */}
       <section className="container mx-auto px-6 py-16 text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-4">
-          Isaac Tetteh-Apotey
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Geomatics Engineer | Quantic MSSE | Bridging Physical Infrastructure & Digital Solutions
-        </p>
-        <p className="text-lg text-gray-500 max-w-3xl mx-auto">
-          Building practical software solutions for geospatial challenges, survey automation, 
-          and digital transformation in infrastructure development.
-        </p>
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            Isaac Tetteh-Apotey
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Geomatics Engineer | Quantic MSSE | Bridging Physical Infrastructure & Digital Solutions
+          </p>
+          <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-10">
+            Building practical software solutions for geospatial challenges, survey automation, 
+            and digital transformation in infrastructure development.
+          </p>
+          
+          {/* Featured Research Publication Badge */}
+          <a 
+            href="https://doi.org/10.5281/zenodo.18133088" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-blue-50 to-white border border-blue-200 rounded-lg px-6 py-4 text-left hover:shadow-lg transition-shadow duration-300 hover:border-blue-300"
+          >
+            <div className="flex flex-col md:flex-row items-center md:space-x-4">
+              <div className="flex-shrink-0 mb-3 md:mb-0">
+                <div className="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wide">
+                  Featured Research
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana's National Grid
+                </h3>
+                <p className="text-sm text-gray-600 mt-1">
+                  Peer-recognized research with 70% accuracy improvement in Greater Accra • Published on Zenodo
+                </p>
+              </div>
+              <div className="mt-2 md:mt-0">
+                <span className="text-blue-600 font-medium">View Publication →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* Research & Publications Section */}
+      <section className="container mx-auto px-6 py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">📚 Research & Publications</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Peer-recognized research bridging practical applications with academic rigor
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <div className="p-8">
+            {/* Publication Header */}
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana's National Grid
+              </h3>
+              <div className="flex flex-wrap items-center gap-3 text-gray-600 mb-3">
+                <span className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                  DOI: <code className="ml-1">10.5281/zenodo.18133088</code>
+                </span>
+                <span>Date: December 2025</span>
+                <span>Publisher: Zenodo</span>
+              </div>
+              
+              {/* DOI Badge */}
+              <a 
+                href="https://doi.org/10.5281/zenodo.18133088"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mb-6"
+              >
+                <img 
+                  src="https://zenodo.org/badge/DOI/10.5281/zenodo.18133088.svg" 
+                  alt="DOI Badge"
+                  className="h-6"
+                />
+              </a>
+            </div>
+
+            {/* Abstract */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Abstract</h4>
+              <p className="text-gray-700 leading-relaxed bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                This empirical study documents a critical coastal-inland accuracy divide and a desktop-mobile 
+                implementation discrepancy within Ghana's National Grid. By validating optimized parameters across 
+                259 control points, the research achieved a 70% accuracy improvement in Greater Accra and provides 
+                a framework for region-aware geospatial applications. The complete methodology, datasets, and 
+                analysis are archived for reproducibility.
+              </p>
+            </div>
+
+            {/* Key Contributions */}
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Key Contributions</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  Discovered and quantified a systematic coordinate transformation discrepancy between desktop GIS (900,000m) and mobile/web (274,291.3m) platforms.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  Mapped a geographic accuracy gradient, showing published parameters achieve 1.3m RMS on the coast but degrade to 61.7m RMS inland.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  Developed and validated an optimized parameter set, providing a 26% average accuracy improvement for inland Ghana.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2 mt-1">•</span>
+                  Architected a dual-app implementation strategy ("Ghana Grid Classic" vs. "Optimized") as an immediate practical solution.
+                </li>
+              </ul>
+            </div>
+
+            {/* Technologies & Methodologies */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Technologies & Methodologies</h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Geodetic Analysis</span>
+                <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Parameter Optimization</span>
+                <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Empirical Validation (259 control points)</span>
+                <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">LaTeX</span>
+                <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Python</span>
+                <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Data Archiving</span>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200">
+              <a 
+                href="https://doi.org/10.5281/zenodo.18133088"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium flex items-center justify-center"
+              >
+                <span>View Full Paper & Archives on Zenodo</span>
+              </a>
+              <a 
+                href="https://github.com/life2allsofts/ita_gh_surveyor_gps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 border border-gray-300 hover:border-gray-400 text-gray-700 text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium hover:bg-gray-50 flex items-center justify-center"
+              >
+                <span>View Related Production Application on GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Professional Tools Section */}
@@ -216,6 +354,17 @@ export default function Home() {
               
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Web companion to our successful mobile app. Convert between Ghana Grid coordinates and Geographic coordinates with survey-grade precision. Features DMS input and meets Ghana cadastral standards.
+                <span className="block mt-2 text-sm text-blue-600 font-medium">
+                  This practical tool directly led to formal research, resulting in a published paper archived on Zenodo:{" "}
+                  <a 
+                    href="https://doi.org/10.5281/zenodo.18133088" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="underline hover:text-blue-800"
+                  >
+                    10.5281/zenodo.18133088
+                  </a>
+                </span>
               </p>
               
               <div className="mb-4">
@@ -232,17 +381,17 @@ export default function Home() {
                 </div>
               </div>
 
-           <div className="flex space-x-3 mt-6">
-  <a 
-    href="https://ita-ghana-coordinate-converter-web.vercel.app/"
-    className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium"
-  >
-    Use Tool
-  </a>
-  <div className="flex-1 border border-gray-300 text-gray-400 text-center py-3 px-4 rounded-lg font-medium bg-gray-100 cursor-not-allowed">
-    Code in Development
-  </div>
-</div>
+              <div className="flex space-x-3 mt-6">
+                <a 
+                  href="https://ita-ghana-coordinate-converter-web.vercel.app/"
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium"
+                >
+                  Use Tool
+                </a>
+                <div className="flex-1 border border-gray-300 text-gray-400 text-center py-3 px-4 rounded-lg font-medium bg-gray-100 cursor-not-allowed">
+                  Code in Development
+                </div>
+              </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Python Flask</span>
