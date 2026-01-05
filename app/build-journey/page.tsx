@@ -73,7 +73,7 @@ export default function BuildJourney() {
         <div className="text-center mt-12 p-6 bg-white rounded-xl shadow-lg max-w-2xl mx-auto border border-gray-200">
           <h3 className="text-2xl font-bold mb-4 text-gray-800">The Lesson</h3>
           <p className="text-gray-700 text-lg">
-            The most "difficult" option is often the most straightforward when you have the right approach. 
+             The most &quot;difficult&quot; option is often the most straightforward when you have the right approach.  
             Complexity dissolves with clear step-by-step execution and resilient problem-solving.
           </p>
         </div>
