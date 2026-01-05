@@ -202,9 +202,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana's National Grid
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+  Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana&apos;s National Grid
+</h3>
                 <p className="text-sm text-gray-600 mt-1">
                   Peer-recognized research with 70% accuracy improvement in Greater Accra • Published on Zenodo
                 </p>
@@ -230,9 +230,9 @@ export default function Home() {
           <div className="p-8">
             {/* Publication Header */}
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana's National Grid
-              </h3>
+             <h3 className="text-2xl font-bold text-gray-900 mb-2">
+  Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana&apos;s National Grid
+</h3>
               <div className="flex flex-wrap items-center gap-3 text-gray-600 mb-3">
                 <span className="bg-gray-100 px-3 py-1 rounded-full text-sm">
                   DOI: <code className="ml-1">10.5281/zenodo.18133088</code>
@@ -260,12 +260,12 @@ export default function Home() {
             <div className="mb-6">
               <h4 className="text-lg font-semibold text-gray-800 mb-3">Abstract</h4>
               <p className="text-gray-700 leading-relaxed bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
-                This empirical study documents a critical coastal-inland accuracy divide and a desktop-mobile 
-                implementation discrepancy within Ghana's National Grid. By validating optimized parameters across 
-                259 control points, the research achieved a 70% accuracy improvement in Greater Accra and provides 
-                a framework for region-aware geospatial applications. The complete methodology, datasets, and 
-                analysis are archived for reproducibility.
-              </p>
+  This empirical study documents a critical coastal-inland accuracy divide and a desktop-mobile 
+  implementation discrepancy within Ghana&apos;s National Grid. By validating optimized parameters across 
+  259 control points, the research achieved a 70% accuracy improvement in Greater Accra and provides 
+  a framework for region-aware geospatial applications. The complete methodology, datasets, and 
+  analysis are archived for reproducibility.
+</p>
             </div>
 
             {/* Key Contributions */}
@@ -285,9 +285,9 @@ export default function Home() {
                   Developed and validated an optimized parameter set, providing a 26% average accuracy improvement for inland Ghana.
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-500 mr-2 mt-1">•</span>
-                  Architected a dual-app implementation strategy ("Ghana Grid Classic" vs. "Optimized") as an immediate practical solution.
-                </li>
+  <span className="text-blue-500 mr-2 mt-1">•</span>
+  Architected a dual-app implementation strategy (&quot;Ghana Grid Classic&quot; vs. &quot;Optimized&quot;) as an immediate practical solution.
+</li>
               </ul>
             </div>
 
