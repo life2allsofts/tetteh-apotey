@@ -178,15 +178,15 @@ export default function Home() {
       <section className="container mx-auto px-6 py-16 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Isaac Tetteh-Apotey
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Geomatics Engineer | Quantic MSSE | Bridging Physical Infrastructure & Digital Solutions
-          </p>
-          <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-10">
-            Building practical software solutions for geospatial challenges, survey automation, 
-            and digital transformation in infrastructure development.
-          </p>
+  Isaac Tetteh-Apotey
+</h1>
+<p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+  Geomatics Engineer (mGhIS) & Software Engineering Researcher | Published Ghana Grid Study (Zenodo) | AI-Augmented Methodology | Quantic MSSE
+</p>
+<p className="text-lg text-gray-500 max-w-3xl mx-auto">
+  Building practical software solutions for geospatial challenges, survey automation, 
+  and digital transformation in infrastructure development.
+</p>
           
           {/* Featured Research Publication Badge */}
           <a 
