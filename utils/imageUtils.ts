@@ -108,6 +108,72 @@ export function getImageDescription(filename: string): ImageInfo {
       title: 'Model Information Dashboard',
       description: 'Comprehensive model metrics including 99.59% AUC-ROC, confusion matrix, and bias correction configuration',
       shortTitle: 'Model Info'
+    },
+    
+    // Café Fausse - Public Facing
+    'cafe-fausse-home.png': {
+      title: 'Elegant Restaurant Homepage',
+      description: 'Sophisticated landing page for Café Fausse featuring the restaurant ambiance and clear calls-to-action for menu viewing and reservations.',
+      shortTitle: 'Home'
+    },
+    'cafe-fausse-menu.png': {
+      title: 'Dynamic Menu with Categories',
+      description: 'Interactive menu system with category filtering, displaying food items, descriptions, and prices with a clean, appetizing design.',
+      shortTitle: 'Menu'
+    },
+    'cafe-fausse-reservation.png': {
+      title: 'Real-Time Reservation System',
+      description: 'Smart booking interface with date/time selection, party size options, and real-time availability checking powered by PostgreSQL.',
+      shortTitle: 'Reservations'
+    },
+    'cafe-fausse-gallery.png': {
+      title: 'Restaurant Image Gallery',
+      description: 'Beautiful gallery showcasing restaurant interior, signature dishes, and dining experience to entice potential customers.',
+      shortTitle: 'Gallery'
+    },
+    
+    // Café Fausse - Admin Authentication & Dashboard
+    'cafe-fausse-admin-login.png': {
+      title: 'Secure Admin Authentication',
+      description: 'JWT-based admin login portal with secure authentication for restaurant staff to access the management dashboard.',
+      shortTitle: 'Admin Login'
+    },
+    'cafe-fausse-admin-dashboard.png': {
+      title: 'Comprehensive Admin Dashboard',
+      description: 'Centralized dashboard for managing all aspects of the restaurant including reservations, customers, and menu items.',
+      shortTitle: 'Dashboard'
+    },
+    
+    // Café Fausse - Admin Management Features
+    'cafe-fausse-admin-reservations.png': {
+      title: 'Reservation Management',
+      description: 'Full CRUD interface for managing customer reservations with status tracking and smart table assignment.',
+      shortTitle: 'Manage Bookings'
+    },
+    'cafe-fausse-admin-menu.png': {
+      title: 'Menu Management System',
+      description: 'Complete menu CRUD operations allowing staff to add, edit, or remove menu items with categories and pricing.',
+      shortTitle: 'Menu Admin'
+    },
+    'cafe-fausse-admin-customers.png': {
+      title: 'Customer Management',
+      description: 'Comprehensive customer database with contact information, reservation history, and newsletter signup status for targeted marketing.',
+      shortTitle: 'Customers'
+    },
+    'cafe-fausse-admin-user-management.png': {
+      title: 'Admin User Management',
+      description: 'Secure user administration with role-based access control, allowing management of staff accounts and permissions.',
+      shortTitle: 'User Admin'
+    },
+    'cafe-fausse-admin-gallery.png': {
+      title: 'Gallery Management',
+      description: 'Full CRUD interface for managing restaurant images - upload, organize, and publish photos to the public gallery.',
+      shortTitle: 'Gallery Admin'
+    },
+    'cafe-fausse-admin-tables.png': {
+      title: 'Table Management',
+      description: 'Smart table configuration system with capacity settings, table numbering, and availability tracking for optimized seating.',
+      shortTitle: 'Tables'
     }
   };
 

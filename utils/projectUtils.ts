@@ -1,4 +1,3 @@
-// utils/projectUtils.ts
 import { Project } from '@/types';
 
 export const ProjectUtils = {
@@ -22,6 +21,13 @@ export const ProjectUtils = {
       return 'malware-classifier';
     }
     
+    if (title.includes('café') || 
+        title.includes('cafe') ||
+        title.includes('restaurant') ||
+        id.includes('cafe-fausse')) {
+      return 'cafe-fausse';
+    }
+    
     return 'public';
   },
 
@@ -32,8 +38,7 @@ export const ProjectUtils = {
       return "https://github.com/life2allsofts/where_in_the_law";
     }
     
-    // REMOVED: malware-classifier GitHub override
-    // Now it will use the githubUrl from Firestore or return empty string
+    // No GitHub override for malware-classifier or cafe-fausse - they use private repo badge
     
     if (project.githubUrl && 
         typeof project.githubUrl === 'string' && 
@@ -51,6 +56,10 @@ export const ProjectUtils = {
     
     if (type === 'malware-classifier') {
       return "https://tetteh-apotey-malware-classifier.hf.space/";
+    }
+    
+    if (type === 'cafe-fausse') {
+      return "https://tetteh-apotey-cafe-fausse.hf.space/";
     }
     
     if (project.liveUrl && 
@@ -71,6 +80,10 @@ export const ProjectUtils = {
       return { color: 'bg-purple-500', text: 'ML Research • Live' };
     }
     
+    if (type === 'cafe-fausse') {
+      return { color: 'bg-amber-600', text: 'Full-Stack • Live' };
+    }
+    
     // Handle undefined status - default to public
     if (project.status === 'private') {
       return { color: 'bg-orange-500', text: `Private • ${project.launchDate || '2025'}` };
@@ -86,6 +99,10 @@ export const ProjectUtils = {
     
     if (projectType === 'malware-classifier') {
       return 'bg-purple-100 text-purple-700';
+    }
+    
+    if (projectType === 'cafe-fausse') {
+      return 'bg-amber-100 text-amber-700';
     }
     
     if (projectType === 'private') {
