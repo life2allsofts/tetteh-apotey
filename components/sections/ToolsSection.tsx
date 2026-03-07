@@ -58,6 +58,8 @@ export default function ToolsSection() {
             <div className="flex space-x-3 mt-6">
               <a 
                 href="https://ita-ghana-coordinate-converter-web.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium"
               >
                 Use Tool
@@ -118,14 +120,9 @@ export default function ToolsSection() {
               >
                 Live Demo
               </a>
-              <a 
-                href="https://github.com/life2allsofts/malware-classifier"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 border border-gray-300 hover:border-gray-400 text-gray-700 text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium hover:bg-gray-50"
-              >
-                View Code
-              </a>
+              <div className="flex-1 text-center py-3 px-4 text-gray-500 text-sm flex items-center justify-center border border-gray-200 rounded-lg">
+                <span className="text-xs">Private Repository</span>
+              </div>
             </div>
 
             <div className="mt-4 flex flex-wrap gap-2">
