@@ -71,28 +71,21 @@ export default function ResearchSection() {
             <div className="flex flex-wrap gap-2">
               <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Geodetic Analysis</span>
               <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Parameter Optimization</span>
-              <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Empirical Validation</span>
+              <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Empirical Validation (259 control points)</span>
               <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">LaTeX</span>
               <span className="bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">Python</span>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200">
+          {/* Single Button - View Full Paper Only */}
+          <div className="flex justify-center pt-6 border-t border-gray-200">
             <a 
               href="https://doi.org/10.5281/zenodo.18133088"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium"
+              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-8 rounded-lg transition-colors duration-200 font-medium"
             >
               View Full Paper on Zenodo
-            </a>
-            <a 
-              href="https://github.com/life2allsofts/ita_gh_surveyor_gps"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 border border-gray-300 hover:border-gray-400 text-gray-700 text-center py-3 px-4 rounded-lg transition-colors duration-200 font-medium hover:bg-gray-50"
-            >
-              View Related Application
             </a>
           </div>
         </div>
