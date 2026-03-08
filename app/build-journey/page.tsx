@@ -40,7 +40,7 @@ export default function BuildJourney() {
     {
       date: "Dec 2025",
       title: "Peer-Reviewed Research Published",
-      description: "Published 'Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana's National Grid' on Zenodo. Study validated across 259 control points, achieving 70% accuracy improvement in Greater Accra.",
+      description: "Published &apos;Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana&apos;s National Grid&apos; on Zenodo. Study validated across 259 control points, achieving 70% accuracy improvement in Greater Accra.",
       decision: "Document methodology, share findings openly, and connect research to practical tools"
     },
     {
@@ -121,7 +121,7 @@ export default function BuildJourney() {
               </span>
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">
-              Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana's National Grid
+              Bridging the Desktop-Mobile Divide: Regional Optimization of Ghana&apos;s National Grid
             </h4>
             <div className="flex flex-wrap gap-2 mb-3">
               <span className="bg-gray-100 px-3 py-1 rounded-full text-xs">
