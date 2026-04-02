@@ -174,6 +174,28 @@ export function getImageDescription(filename: string): ImageInfo {
       title: 'Table Management',
       description: 'Smart table configuration system with capacity settings, table numbering, and availability tracking for optimized seating.',
       shortTitle: 'Tables'
+    },
+
+    // Acme Policy Assistant
+    'acme-policy-home.png': {
+      title: 'Main Assistant Interface',
+      description: 'Clean chat interface for asking company policy questions with example prompts and welcome message.',
+      shortTitle: 'Home'
+    },
+    'acme-policy-pto-question.png': {
+      title: 'PTO Policy Query',
+      description: 'Asking about paid time off with detailed response including accrual rates by tenure and PTO balance tracking information.',
+      shortTitle: 'PTO Query'
+    },
+    'acme-policy-sources.png': {
+      title: 'Source Citations',
+      description: 'Retrieval-Augmented Generation showing exact policy documents and sections used to generate the answer for transparency and verification.',
+      shortTitle: 'Sources'
+    },
+    'acme-policy-security-question.png': {
+      title: 'Security Policy Query',
+      description: 'Demonstrating the assistant\'s ability to answer different policy domains like security, remote work, or expenses.',
+      shortTitle: 'Security Query'
     }
   };
 

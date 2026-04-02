@@ -19,6 +19,8 @@ export default function ProjectCard({ project, onImageClick }: ProjectCardProps)
     ? 'border-purple-500 bg-gradient-to-br from-purple-50 to-white'
     : projectType === 'cafe-fausse'
     ? 'border-amber-600 bg-gradient-to-br from-amber-50 to-white'
+    : projectType === 'acme-policy-assistant'
+    ? 'border-teal-600 bg-gradient-to-br from-teal-50 to-white'
     : project.status === 'private' 
     ? 'border-orange-500 bg-gradient-to-br from-orange-50 to-white'
     : 'border-blue-500 bg-gradient-to-br from-blue-50 to-white';
@@ -101,6 +103,25 @@ function renderActionButtons(projectType: string, liveUrl: string, githubUrl: st
           className="flex-1 bg-amber-600 hover:bg-amber-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 font-medium"
         >
           Live Demo
+        </a>
+        <div className="flex-1 text-center py-2 px-4 text-gray-500 text-sm flex items-center justify-center border border-gray-200 rounded-lg">
+          <span className="text-xs">Private Repository</span>
+        </div>
+      </>
+    );
+  }
+
+  // Acme Policy Assistant - RAG Assistant (Private Repository)
+  if (projectType === 'acme-policy-assistant') {
+    return (
+      <>
+        <a 
+          href={liveUrl || '#'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 bg-teal-600 hover:bg-teal-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 font-medium"
+        >
+          Try Assistant
         </a>
         <div className="flex-1 text-center py-2 px-4 text-gray-500 text-sm flex items-center justify-center border border-gray-200 rounded-lg">
           <span className="text-xs">Private Repository</span>

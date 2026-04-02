@@ -28,6 +28,13 @@ export const ProjectUtils = {
       return 'cafe-fausse';
     }
     
+    if (title.includes('policy') || 
+        title.includes('assistant') ||
+        title.includes('acme') ||
+        id.includes('acme-policy-assistant')) {
+      return 'acme-policy-assistant';
+    }
+    
     return 'public';
   },
 
@@ -38,7 +45,7 @@ export const ProjectUtils = {
       return "https://github.com/life2allsofts/where_in_the_law";
     }
     
-    // No GitHub override for malware-classifier or cafe-fausse - they use private repo badge
+    // No GitHub override for malware-classifier, cafe-fausse, or acme-policy-assistant - they use private repo badge
     
     if (project.githubUrl && 
         typeof project.githubUrl === 'string' && 
@@ -60,6 +67,10 @@ export const ProjectUtils = {
     
     if (type === 'cafe-fausse') {
       return "https://tetteh-apotey-cafe-fausse.hf.space/";
+    }
+    
+    if (type === 'acme-policy-assistant') {
+      return "https://tetteh-apotey-acme-policy-assistant.hf.space/";
     }
     
     if (project.liveUrl && 
@@ -84,6 +95,10 @@ export const ProjectUtils = {
       return { color: 'bg-amber-600', text: 'Full-Stack • Live' };
     }
     
+    if (type === 'acme-policy-assistant') {
+      return { color: 'bg-teal-600', text: 'RAG • Live' };
+    }
+    
     // Handle undefined status - default to public
     if (project.status === 'private') {
       return { color: 'bg-orange-500', text: `Private • ${project.launchDate || '2025'}` };
@@ -103,6 +118,10 @@ export const ProjectUtils = {
     
     if (projectType === 'cafe-fausse') {
       return 'bg-amber-100 text-amber-700';
+    }
+    
+    if (projectType === 'acme-policy-assistant') {
+      return 'bg-teal-100 text-teal-700';
     }
     
     if (projectType === 'private') {
