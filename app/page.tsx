@@ -8,6 +8,7 @@ import { getImageDescription } from '@/utils/imageUtils';
 // Components
 import LoadingSpinner from '@/components/layout/LoadingSpinner';
 import HeroSection from '@/components/sections/HeroSection';
+import HowIWorkSection from '@/components/sections/HowIWorkSection';
 import ResearchSection from '@/components/sections/ResearchSection';
 import ToolsSection from '@/components/sections/ToolsSection';
 import ProjectsSection from '@/components/sections/ProjectsSection';
@@ -56,6 +57,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <HeroSection />
+      <HowIWorkSection />
       <ResearchSection />
       <ToolsSection />
       <ProjectsSection 
